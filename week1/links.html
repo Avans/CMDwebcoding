@@ -1,0 +1,46 @@
+<md-toolbar class="md-theme-indigo">
+	<h1 class="md-toolbar-tools">Week 1 - Hyperlinks</h1>
+</md-toolbar>
+
+<section class="md-padding max-sized">
+
+
+  <img src="week1/img/anchor.png" alt="Anchor" class="pull-right">
+
+  <p>Het web zou het web niet zijn als er geen hyperlinks waren geweest. Die blauw onderstreepte stukjes tekst zorgen ervoor dat we eindeloos blijven doorklikken naar een volgende pagina</p>
+
+  <p style="clear: both;">Een link maken doe je met de <code>&lt;a&gt;</code> tag. Met het <b>href</b> attribuut geef je vervolgens aan waar de link naar wijst:</p>
+
+  <code class="livepreview">
+    &lt;a href="http://www.avans.nl/"&gt;Avans Hogeschool&lt;/a&gt;
+  </code>
+
+  <p>Deze URL die met <span class="mono">http://</span> begint noemen we een <b>absolute url</b>. Dat is een link waar ook het domeinnaam in staat en die op elke website werkt. Als we linken naar een pagina op dezelfde site hoeven we dit niet ervoor te zetten en mag je beginnen met de <b>slash</b> achter het domein:</p>
+
+  <code class="livepreview">
+&lt;a href="/Webdictaat/basis/lijsten.html"&gt;Ga terug naar 'Lijsten'&lt;/a&gt;
+&lt;a href="/Webdictaat"&gt;Ga terug naar homepage&lt;/a&gt;
+  </code>
+
+  <h3>Relatieve URL's</h3>
+
+  <p>Als bestanden al in dezelfde map staan hoef je helemaal niet meer het pad op te geven, je hoeft dan alleen de bestandsnaam op te geven:</p>
+
+  <code class="livepreview" style="clear: both">
+&lt;a href="lijsten.html"&gt;Ga naar 'Lijsten'&lt;/a&gt;
+  </code>
+
+  <p>Op deze manier kan je ook links maken naar bestanden die in een andere map staan:</p>
+
+  <code class="livepreview" style="clear: both">
+  &lt;a href="../basis2/afbeeldingen.html"&gt;Ga naar 'Afbeeldingen'&lt;/a&gt;
+  </code>
+
+  <h3>Target</h3>
+  <p>Een veel gebruikt attribuut van de anchor-tag is het <b>target</b> attribuut. Daarmee kan je aangeven in welk venster een link wordt geladen. Als je wil dat een link altijd in een nieuw venster opent kan je dat doen met de <span class="mono">_blank</span> waarde:</p>
+
+  <code class="livepreview" style="clear: both">
+  &lt;a href="http://bb.avans.nl/" target="_blank"&gt;Ga naar Blackboard&lt;/a&gt;
+  </code>
+
+</section>

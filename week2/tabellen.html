@@ -1,0 +1,78 @@
+<md-toolbar class="md-theme-indigo">
+	<h1 class="md-toolbar-tools">Week 2 - Tabellen</h1>
+</md-toolbar>
+
+<section class="md-padding max-sized">
+    
+  <img src="week2/img/spreadsheet.png" alt="Spreadsheet" class="pull-right">
+
+  <p>Tabellen zijn de spreadsheets van het internet. Ze zijn ideaal als je een stukje informatie hebt dat uit Excel komt, uit een database komt of op een andere manier is opgebouwd uit <b>rijen</b> en <b>kolommen</b>.</p>
+
+  <p>Binnen de rijen van een HTML tabel plaats je de afzonderlijke cellen.  De cel van een tabel kan ieder willekeurig stukje informatie bevatten, zoals tekst en afbeeldingen. Tabellen worden vaak gebruikt om gegevens die logisch bij elkaar horen overzichtelijk te presenteren. Denk hierbij bijvoorbeeld aan een tabel met naam en adresgegevens zoals onderstaand voorbeeld laat zien.</p>
+
+  <code class="livepreview">
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Naam&lt;/th&gt;
+    &lt;th&gt;Adres&lt;/th&gt;
+    &lt;th&gt;Postcode&lt;/t&gt;
+    &lt;th&gt;Woonplaats&lt;/th&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;Aarts&lt;/td&gt;
+    &lt;td&gt;Eikenlaan 12&lt;/td&gt;
+    &lt;td&gt;1234 AA&lt;/td&gt;
+    &lt;td&gt;Arnhem&lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;Berens&lt;/td&gt;
+    &lt;td&gt;Zeestraat 98&lt;/td&gt;
+    &lt;td&gt;5664 AB&lt;/td&gt;
+    &lt;td&gt;Vlissingen&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+  </code>
+
+  <div class="assignment">
+    <p class="easy">Oefening 1: voeg jezelf toe als een rij aan deze tabel.</p>
+    <p class="medium">Oefening 2: Voeg een kolom 'e-mailadres' toe en vul deze voor alle rijen in.</p>
+  </div>
+
+  <p>Binnen de <code>&lt;table&gt;</code> tag waarmee we het begin en het eind van de tabel aangeeft plaats je de verschillende tabel rijen. Elke rij geef je aan met de <code>&lt;tr&gt;</code> tag (<b>t</b>able <b>r</b>ow). Binnen elke rij kan je vervolgens de verschillende cellen aangeven.</p>
+
+  <p>Er zijn twee verschillende manieren om een tabel cel in een rij te maken. De eerste is de <code>&lt;th&gt;</code> tag (<b>t</b>able <b>h</b>eader) waarmee je een cel aangeeft die als kopje fungeert in de tabel. In de bovenstaande tabel zijn dat bijvoorbeeld alle cellen in de eerste rij.</p>
+
+  <p>De tweede manier is met de <code>&lt;td&gt;</code> tag (<b>t</b>able <b>d</b>ata). Dit is een 'normale' cel in de tabel. Zonder verdere stijlopmaak is het enige zichtbare verschil dat de &lt;th&gt; standaard vet en gecentreerd wordt afgedrukt in browsers en de &lt;td&gt; niet.</p>
+
+  <h3>Colspan &amp; rowspan</h3>
+
+  <p>Net als in een spreadsheet is het in HTML mogelijk om cellen samen te voegen. Dit doe je met behulp van het <b>colspan</b> en <b>rowspan</b> attribuut. Met deze twee attributen kan je een cel in een tabel over meerdere rijen en/of kolommen laten spreiden.</p>
+
+  <p>Als je een cel bijvoorbeeld over drie kolommen wil spreiden doe je dat door aan deze cel het attribuut <code>colspan="3"</code> mee te geven. De cel wordt dan breder en neemt dan ook ruimte in de twee kolommen rechts van de cel.</p>
+
+  <p>Het is belangrijk dat je in de HMTL de cellen weglaat die normaal op de plek zouden staan die de samengevoegde cel inneemt.</p>
+
+  <code class="livepreview">
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;td colspan="3"&gt;Samengevoegde rij&lt;/td&gt;
+    &lt;!-- Let op, de twee cellen die hier normaal zouden staan, staan hier nu niet meer! --&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;Eerste cel&lt;/td&gt;
+    &lt;td&gt;Tweede cel&lt;/td&gt;
+    &lt;td&gt;Derde cel&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+  </code>
+
+  <div class="assignment">
+    <p class="easy">Oefening 1: Wat gebeurt er als je colspan verandert in 2? Of in 1?</p>
+    <p class="medium">Oefening 2: Voeg een 'Vierde cel' toe. Zorg ervoor dat de samengevoegde rij nog steeds boven alle cellen strekt.</p>
+    <p class="hard">Oefening 3: Maak een tabel van twee rijen en drie kolommen. Pas deze daarna aan zodat de twee cellen van de middelste <b>kolom</b> samengevoegd zijn.</p>
+  </div>
+
+</section>

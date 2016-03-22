@@ -1,0 +1,130 @@
+<md-toolbar class="md-theme-indigo">
+	<h1 class="md-toolbar-tools">Week 3 - Borders, paddings &amp; margins</h1>
+</md-toolbar>
+
+<section class="md-padding max-sized">
+    
+  <p>We hebben nu gezien hoe we met behulp van css (Cascading Stylesheets) kleuren en lettergrootte kunnen bepalen.
+      Nu gaan we kijken wat voor soort dingen we nog meer kunnen doen.</p>
+
+  <h3>Border</h3>
+
+  <p>We kunnen bijvoorbeeld een element een <code>border</code> geven. In onderstaand voorbeeld hebben we een div element een bruine rand van 6 pixels gegeven. We kunnen naast <code>solid</code> ook <code>dotted</code> of <code>dashed</code> als lijnsoort gebruiken. Probeer deze uit in onderstaand voorbeeld.</p>
+
+
+  <code class="livepreview pre">
+<span class="css">
+div {
+    border-width: <input type="range" value="6" min="0" max="10">px;
+    border-style: <select><option selected>solid</option><option>dashed</option><option>dotted</option></select>;
+    border-color: <input type="color" value="#a52a2a">;
+    background-color: yellow;
+}
+</span>
+
+&lt;div&gt;
+  Banaan
+&lt;/div&gt;</code>
+
+  <p>We kunnen bovenstaande CSS ook in één regel neerzetten: <code>border: 6px solid #a52a2a</code>.</p>
+
+  <p>Met <b>border</b> geven we alle vier de randen tegelijk dezelfde stijl. Maar we kunnen ook de randen individueel een kleur geven:</p>
+
+  <code class="livepreview pre">
+<span class="css">
+div {
+  border-top: <input type="range" value="3" min="0" max="10">px solid blue;
+  border-bottom: <input type="range" value="3" min="0" max="10">px solid yellow;
+  border-left: <input type="range" value="3" min="0" max="10">px solid red;
+  border-right: <input type="range" value="3" min="0" max="10">px solid green;
+}
+</span>
+
+&lt;div&gt;
+ Vrolijke kleurtjes
+&lt;/div&gt;</code>
+
+  <h4>Tip</h4>
+  Als je bezig bent met de layout van de pagina is het handig om elementen tijdelijk een border te geven.
+  Dan zie je namelijk hoe groot ze zijn!
+
+
+  <h3 style="clear: both;">Padding</h3>
+
+  <p>Nu staan de randjes heel dicht om de tekst heen. Om wat meer ruimte te maken tussen de inhoud van de div en het randje gebruiken we <code>padding</code>. Daarmee geven we aan hoeveel ruimte er tussen de <em>inhoud</em> van een element en de <em>rand</em> van een element moet komen.
+</p>
+
+  <code class="livepreview pre">
+<span class="css">
+div {
+  border: 1px solid black;
+  padding: <input type="range" value="30" min="0" max="50">px;
+}
+</span>
+
+&lt;div&gt;
+  Hier heb ik meer ruimte.
+&lt;/h4&gt;
+</code>
+
+  <h3>Margin</h3>
+  <p>Op dezelfde manier als padding de ruimte definieert tussen de inhoud en de rand kunnen we met <code>margin</code> de ruimte aangeven tussen de rand en de rest van de pagina.</p>
+
+    <code class="livepreview pre">
+<span class="css">
+div {
+  border: 1px solid black;
+  margin: <input type="range" value="40" min="0" max="50">px;
+}
+</span>
+
+&lt;div&gt;
+  Hier geef ik meer ruimte.
+&lt;/div&gt;
+</code>
+
+  <h3>Width &amp; height</h3>
+
+<p>Standaard zijn alle elementen groot genoeg om wat er in staat goed weer te geven. Maar we kunnen ook expliciet de hoogte en de breedte aangeven in een stylesheet. Dit doen we met de <code>width</code> en <code>height</code>. Dit is de grootte <em>zonder</em> de padding, border en margin. Dus alleen de grootte van de <em>inhoud</em></p>
+
+  <code class="livepreview pre">
+<span class="css">
+div {
+  border: 1px solid black;
+  width: <input type="range" value="200" min="0" max="300">px;
+  height: <input type="range" value="150" min="0" max="200">px;
+}
+</span>
+
+&lt;div&gt;
+  Ik ben een vaste grootte
+&lt;/div&gt;
+</code>
+
+  <p>
+    De manier waarop margins, paddings and borders werken in CSS noemen we ook wel het 'CSS Box Model'. Net zoals we de border aan alle vier de kanten individueel kunnen veranderen. Kunnen we dat met margin en padding ook doen, bijvoorbeeld met <code>margin-top</code> of <code>padding-left</code>.
+  </p>
+
+  <h3>Alles tegelijk</h3>
+
+  <code class="livepreview">
+  <span class="css">
+div {
+    margin: <input type="range" value="0" min="0" max="50">px;
+    padding: <input type="range" value="0" min="0" max="50">px;
+
+    border: <input type="range" value="1" min="0" max="20">px solid black;
+
+    width: <input type="range" value="100" min="0" max="300">px;
+    height: <input type="range" value="100" min="0" max="300">px;
+}
+    </span>
+    &lt;div&gt;Een div&lt;/div&gt;
+</code>
+
+  <div class="assignment">
+    <p class="easy">Wat gebeurt er als de padding, width en height op 0 staan?</p>
+  </div>
+
+</body>
+</html>

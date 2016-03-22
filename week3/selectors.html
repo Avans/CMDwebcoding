@@ -1,0 +1,261 @@
+<md-toolbar class="md-theme-indigo">
+	<h1 class="md-toolbar-tools">Week 3 - Afbeeldingen</h1>
+</md-toolbar>
+
+<section class="md-padding max-sized">
+    
+<body>
+  <h2>Stylesheets Selectors</h2>
+
+  <p>We hebben al twee manieren gezien om aan te geven op welke elementen we een bepaalde stijl van toepassing willen laten zijn. Namelijk via een class (<code>.belangrijk</code>) en via de tagname (<code>h3</code>). Deze patronen waarmee je aangeeft welke elementen je 'selecteert' om een bepaalde stijl te hebben hebben noemen we <strong>selectors</strong></p>
+
+  <img src="css/selection.png" class="pull-right">
+  <p>Hieronder geven we een lijst van voorbeelden van veel gebruikte selectors:</p>
+
+  <ul>
+      <li><code>*</code> Selecteert alle elementen</li>
+      <li><code>.belangrijk</code> Selecteert alle elementen met het attribuut <code>class="belangrijk"</code></li>
+      <li><code>#content</code> Selecteert het element met het attribuut <code>id="content"</code></li>
+      <li><code>h3</code> Selecteert alle h3 elementen</li>
+      <li><code>h3, h4</code> Selecteert alle h3 en h4 elementen</li>
+      <li><code>article h3</code> Selecteert alle h3 elementen die zich <em>binnen</em> een article element bevinden</li>
+      <li><code>article > h3</code> Selecteert alle h3 elementen die zich <em>direct binnen</em> een article element bevinden. De h3 mag bijvoorbeeld niet in een div in een article staan, maar moet direct in de article staan.</li>
+  </ul>
+
+  <p>We kunnen de verschillende selectors ook combineren:</p>
+
+  <code>div#content p</code>
+
+  <p>Deze regel betekent: alle p elementen die zich binnen een div met het attribuut <code>id="content"</code> bevinden.</p>
+
+  <h4>Sterretje selector</h4>
+  <p>Met het sterretje selecteer je alle elementen. Je kunt dus aan alle elementen tegelijk dezelfde stijlregels geven. Deze selector wordt niet veel gebruikt.</p>
+
+  <code class="livepreview pre">
+<span class="css">
+* {
+  color: red;
+}
+</span>
+
+&lt;p&gt;Sterretje selecteert alle elementen! Waaronder:&lt;/p&gt;
+&lt;div&gt;Een div&lt;/div&gt;
+&lt;h3&gt;Een header&lt;/h3&gt;
+&lt;p&gt;En een paragraaf&lt;/p&gt;
+</code>
+
+  <h4>Element selector</h4>
+
+  <p>Ok, sterretje is misschien wat te breed. Maar we kunnen ook alle elementen van een bepaalde tag selecteren met behulp van de element selector.</p>
+
+    <code class="livepreview pre">
+<span class="css">
+div {
+  color: red;
+}
+</span>
+
+&lt;p&gt;De element selector is wat specifieker
+  en selecteert alle elementen van een
+  bepaald type.&lt;/p&gt;
+&lt;div&gt;Een div&lt;/div&gt;
+&lt;h3&gt;Een header&lt;/h3&gt;
+&lt;p&gt;Een paragraaf&lt;/p&gt;
+&lt;div&gt;Nog een div&lt;/div&gt;</code>
+
+  <div class="assignment">
+    <p class="easy">Verander de selector om juist de header in plaats van de div rood de maken</p>
+  </div>
+
+  <h4>Class selector</h4>
+
+  <p>Element selectors zijn handig, maar soms gelden dezelfde stijlregels voor een groep
+      elementen die niet met dezelfde tag zijn te selecteren. Of juist dat je niet alle elementen
+      met dezelfde tag wilt selecteren, maar slechts een aantal daarvan. In al deze gevallen kunnen
+      we deze elementen in de HTML een class meegeven en via de CSS de gewenste opmaak geven.</p>
+
+  <p>In de CSS geven we class selectors aan met een <code>.</code> gevolgd door de naam van de class.
+
+  <p>Elementen kunnen meerdere classes hebben</p>
+
+    <code class="livepreview pre">
+<span class="css">
+.belangrijk {
+  color: red;
+}
+</span>
+
+&lt;div&gt;Een div&lt;/div&gt;
+&lt;div class="belangrijk"&gt;Een belangrijke div&lt;/div&gt;
+&lt;h3&gt;Een header&lt;/h3&gt;
+&lt;h3 class="belangrijk"&gt;Een belangrijke header&lt;/h3&gt;
+</code>
+
+  <div class="assignment">
+    <p class="easy">Maak nog een derde element belangrijk</p>
+    <p class="medium">Voeg een extra stijlregel toe die elementen met de class "blauw", blauw maakt. Test deze door de class een element toe te voegen.</p>
+  </div>
+
+  <h4>ID selector</h4>
+
+  <p>Sommige stijlregels zijn maar van toepassing op één enkel element. In dat geval is het toepasselijk om deze te selecteren met een id.
+      Een id moet namelijk uniek zijn op de pagina.</p>
+
+  <p>In de CSS geven we ID selectors aan met een <code>#</code> gevolgd door de naam van de id</p>
+
+    <code class="livepreview pre">
+<span class="css">
+#anders {
+  color: red;
+}
+</span>
+
+&lt;div&gt;Een div&lt;/div&gt;
+&lt;div id="anders"&gt;Een div met een id "anders"&lt;/div&gt;
+&lt;div id="nogeentje"&gt;Nog een div&lt;/div&gt;
+</code>
+
+  <div class="assignment">
+    <p class="easy">Maak de laatste div rood met de ID selector</p>
+  </div>
+
+  <h4>Komma selector</h4>
+
+  <p>Als we de element selector voor meerdere soorten elementen willen gebruiken kunnen we deze combineren met de komma selector:</p>
+
+    <code class="livepreview pre">
+<span class="css">
+h2, h3 {
+  color: red;
+}
+</span>
+
+&lt;h1&gt;Grote header&lt;/h1&gt;
+&lt;h2&gt;Minder grote header&lt;/h2&gt;
+&lt;h3&gt;Kleine header&lt;/h3&gt;
+</code>
+
+  <div class="assignment">
+    <p class="easy">Maak naast de h2 en de h3 ook de h1 rood</p>
+  </div>
+
+  <h4>Spatie selector</h4>
+
+  <p>Met de spatie selector kunnen we een groep elementen selecteren die zich <em>binnen</em> een bepaald element bevinden. Bijvoorbeeld alle lijst items in een menu </p>
+
+    <code class="livepreview pre">
+<span class="css">
+#hoofdmenu li {
+  list-style-type: square;
+}
+</span>
+
+&lt;ul id="hoofdmenu"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ul&gt;
+      &lt;li&gt;Subitem 1&lt;/li&gt;
+      &lt;li&gt;Subitem 2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;</code>
+
+  <div class="assignment">
+    <p class="medium">Maak alleen de subitems rood</p>
+  </div>
+
+  <h4>Pijltje selector (>)</h4>
+
+  <p>De <code>></code> selector werkt bijna hetzelfde als de spatie selector. Maar selecteert alleen elementen die zich <em>direct</em> binnen een ander element bevindt. Vergelijk onderstaand voorbeeld eens met het bovenstaande.</p>
+
+    <code class="livepreview pre">
+<span class="css">
+#hoofdmenu > li {
+  list-style-type: square;
+}
+</span>
+
+&lt;ul id="hoofdmenu"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ul&gt;
+      &lt;li&gt;Subitem 1&lt;/li&gt;
+      &lt;li&gt;Subitem 2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;</code>
+
+  <h4>Pseudoclasses</h4>
+
+  <p>Selectors zoals <code>:first-child</code> en <code>:hover</code> heten 'pseudoclasses'
+      en bieden extra functionaliteit die normale selectors niet kunnen bieden.
+      Hieronder staan een paar voorbeelden. Als je zoekt op internet vind je er nog meer.
+      </p>
+
+  <code class="livepreview pre">
+<span class="css">
+li:first-child {
+  color: red;
+}
+
+li:last-child {
+  color: blue;
+}
+
+li:hover {
+  color: yellow;
+}
+</span>
+
+&lt;ul&gt;
+  &lt;li&gt;Ga met de muis over de items heen&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ul&gt;
+      &lt;li&gt;Subitem 1&lt;/li&gt;
+      &lt;li&gt;Subitem 2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;</code>
+
+  <p></p>
+
+  <h4>Even oefenen</h4>
+  <p>Vind je het nog lastig? Probeer dan eens bij onderstaande tekst de volgende selectors te maken:<br />
+
+  <div class="assignment">
+    <p class="easy">Maak alleen de elementen met de class <b>'belangrijk'</b> rood</p>
+    <p class="easy">Maak alleen <b>blokje1</b> rood</p>
+    <p class="medium">Maak alleen de <b>belangrijke</b> header binnen <b>blokje1</b> rood. <b>Hint:</b> Combineer de uitwerking van de vorige twee oefeningen.</p>
+  </div>
+
+  <code class="livepreview pre">
+<span class="css">
+/* Verander '.eerste' in een andere
+   selector om de opdracht te maken */
+.eerste {
+  color: red;
+}
+</span>
+
+&lt;div id="blokje1"&gt;
+  &lt;h3 class="eerste"&gt;Eerste onderwerp&lt;/h3&gt;
+  &lt;h3&gt;Tweede onderwerp&lt;/h3&gt;
+  &lt;h3 class="belangrijk"&gt;Belangrijk! Maak alleen mij rood&lt;/h3&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;div id="blokje2"&gt;
+  &lt;h3 class="eerste"&gt;Eerste onderwerp in blokje twee&lt;/h3&gt;
+  &lt;h3 class="belangrijk"&gt;Belangrijk in blokje 2&lt;/h3&gt;
+  &lt;h3&gt;Laatste onderwerp&lt;/h3&gt;
+&lt;/div&gt;
+</code>
+
+  Kom je niet uit de laatste oefening? <a href="#" onclick="$('#antwoord').toggle(); return false;">Bekijk dan het antwoord</a>
+  <code style="display: none;" id="antwoord">#blokje1 .belangrijk</code>
+</body>
+</html>

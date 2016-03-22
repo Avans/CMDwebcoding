@@ -1,0 +1,65 @@
+<md-toolbar class="md-theme-indigo">
+	<h1 class="md-toolbar-tools">Week 1 - Lijsten</h1>
+</md-toolbar>
+
+<section class="md-padding max-sized">
+
+
+  <img src="week1/img/bucketlist.png" alt="Bucket list" class="pull-right">
+
+  <p>Lijsten zijn een belangrijk onderdeel onderdeel van HTML en zie je op bijna elke webpagina terug. Denk bijvoorbeeld maar eens aan:</p>
+
+  <ul>
+    <li>Inhoudsopgave van een pagina</li>
+    <li>Items in een menu</li>
+    <li>Lijst van nieuwsberichtjes</li>
+    <li>Lijst van voorbeelden waar je lijsten voor kan gebruiken</li>
+  </ul>
+
+  <p>Er zijn twee soorten lijsten die we kunnen gebruiken, de <strong>genummerde lijst</strong> en de <strong>ongenummerde lijst</strong>. (Er is ook een <a href="http://www.w3schools.com/tags/tag_dt.asp">derde soort lijst</a>, maar die wordt in de praktijk weinig gebruikt)</p>
+
+  <h3>Genummerde lijst</h3>
+
+  <p>De genummerde lijst maken we met de <code>&lt;ol&gt;</code> tag (<strong>o</strong>rdered <strong>l</strong>ist). De verschillende items binnen de lijst maken we vervolgens met de <code>&lt;li&gt;</code> tag (<b>l</b>ist <b>i</b>tem):</p>
+
+    <code class="livepreview">
+&lt;ol&gt;
+  &lt;li&gt;Dit is nummer 1&lt;/li&gt;
+  &lt;li&gt;Dit is nummer 2&lt;/li&gt;
+&lt;/ol&gt;
+    </code>
+
+  <h3>Ongenummerde lijst</h3>
+
+  <p>De ongenummerde lijst kan je maken met de <code>&lt;ul&gt;</code> tag (<b>u</b>nordered <b>l</b>ist) en werkt precies hetzelfde als de genummerde lijst:</p>
+
+  <code class="livepreview">
+&lt;ul&gt;
+  &lt;li&gt;Dit stukje tekst staat naast de eerste stip&lt;/li&gt;
+  &lt;li&gt;Dit stukje tekst staat naast de tweede stip&lt;/li&gt;
+&lt;/ul&gt;
+  </code>
+
+  <h3>Nesten van lijsten</h3>
+
+  <p>Een krachtige feature van lijsten is dat ze makkelijk te gebruiken zijn om sublijsten te maken. Dit kan je doen door een lijst binnen een &lt;li&gt; van een andere lijst te plaatsen.</p>
+
+  <pre class="ppPrettyprint">
+Todo:
+&lt;ul&gt;
+  &lt;li&gt;Was ophangen&lt;/li&gt;
+  &lt;li&gt;Boodschappen doen
+    &lt;ul&gt;
+      &lt;li&gt;Melk&lt;/li&gt;
+      &lt;li&gt;Brood&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Huis opruimen&lt;/li&gt;
+&lt;/ul&gt;
+    </pre>
+
+  <p>Let op dat je de sublijst <em>binnen</em> de &lt;li&gt; plaatst! Anders werkt het vaak niet zoals je zou verwachten en is het ook geen valide HTML.</p>
+
+    <div class="assignment"><p class="medium">Voeg twee subitems toe aan Huis opruimen: 'Ramen lappen' en 'Stofzuigen'</a></p>
+
+</section>

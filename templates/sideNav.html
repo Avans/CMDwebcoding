@@ -1,0 +1,93 @@
+
+<md-sidenav class="md-sidenav-left md-whiteframe-z2 md-closed ng-isolate-scope md-locked-open" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" tabindex="-1">
+
+	<md-toolbar class="md-theme-indigo">
+		<md-button  hide-gt-md="" ng-click="closeLeft()" class="md-icon-button" aria-label="Settings">
+          <ng-md-icon icon="menu" style="fill: white" size="36"></ng-md-icon> 
+            <md-tooltip>
+                Side Nav
+            </md-tooltip>
+        </md-button>
+        
+		
+	</md-toolbar>
+	
+	<section layout-padding layout="column">
+		
+		<!-- Dit menu heeft 2 displays, als schuif menu, en inline menu -->
+		
+		
+		
+		<!-- De items met hide-gt-sm zijn niet zichtbaar als het scherm groot is -->
+		   
+        <a hide-gt-sm class="md-title" ui-sref="home"><md-button >
+            Webs1
+        </md-button></a>  
+    
+        <a hide-gt-sm class="md-title" ui-sref="leaderboards"><md-button >
+            Leaderboards
+        </md-button></a>  
+		
+		<pp-side-nav>
+			<ul>
+				<li><span id="inleiding">Inleiding</span>
+                    <ul>
+                        <li><a ui-sref="inleidinga">World Wide Web</a></li>
+                        <li><a ui-sref="inleidingb">Geschiedenis</a></li>
+                        <li><a ui-sref="inleidingc">Ontwerpen</a></li>
+                    </ul>
+                </li>
+				<li><span id="week1">Week 1</span>
+                    <ul>
+                        <li><a ui-sref="week1a">Basisstructuur</a></li>
+                        <li><a ui-sref="week1b">Basistags</a></li>
+                        <li><a ui-sref="week1c">Tekstindeling</a></li>
+                        <li><a ui-sref="week1d">Lijsten</a></li>
+                        <li><a ui-sref="week1e">Hyperlinks</a></li>
+                        <li><a ui-sref="week1f">Entiteiten</a></li>
+                    </ul>
+				</li>
+                <li><span id="week2">Week 2</span>
+                    <ul>
+                        <li><a ui-sref="week2a">Afbeeldingen</a></li>
+                        <li><a ui-sref="week2b">Formulieren</a></li>
+                        <li><a ui-sref="week2c">Tabellen</a></li>
+                    </ul>   
+                </li>
+                <li><span id="week3">Week 3</span>
+                    <ul>
+                        <li><a ui-sref="week3a">Stylesheets</a></li>
+                        <li><a ui-sref="week3b">Selectors</a></li>
+                        <li><a ui-sref="week3c">Tekstopmaak</a></li>
+                        <li><a ui-sref="week3d">Paddings &amp; margins</a></li>
+                        <li><a ui-sref="week3e">Maten &amp; kleuren</a></li>
+                        <li><a ui-sref="week3f">Float</a></li>
+                    </ul>   
+                </li>
+                <li><span id="week4">Week 4</span>
+                    <ul>
+                        <li><a ui-sref="week4a">Kolommen</a></li>
+                        <li><a ui-sref="week4b">Centreren</a></li>
+                        <li><a ui-sref="week4c">Positioneren</a></li>
+                    </ul>   
+                </li>
+                <li><span id="week5">Week 5</span>
+                    <ul>
+                        <li><a ui-sref="week5a">Dropdown</a></li>
+                        <li><a ui-sref="week5b">Horizontaal</a></li>
+                    </ul>   
+                </li>
+                <li><span id="week6">Week 6</span>
+                    <ul>
+                        <li><a ui-sref="week6a">Stylesheet</a></li>
+                        <li><a ui-sref="week6b">Media queries</a></li>
+                    </ul>   
+                </li>
+                
+			</ul>
+		</pp-side-nav>
+		
+
+        
+	</section>
+</md-sidenav>

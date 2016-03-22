@@ -1,0 +1,149 @@
+<md-toolbar class="md-theme-indigo">
+	<h1 class="md-toolbar-tools">Week 3 - Afbeeldingen</h1>
+</md-toolbar>
+
+<section class="md-padding max-sized">
+    
+  <img src="css/fonts.png" class="pull-right" style="margin: 15px">
+  <h2>Tekstopmaak</h2>
+  <p>In CSS kan je op veel manieren de opmaak van de tekst veranderen.
+     Hieronder bespreken we een paar van de meest gebruikte.
+     Het is natuurlijk ook mogelijk om ze te combineren.</p>
+
+  <h3>font-size</h3>
+  <p>Geeft grootte van tekst aan. Waardes:
+  <ul>
+      <li><code>xx-small</code></li>
+      <li><code>x-small</code></li>
+      <li><code>small</code></li>
+      <li><code>medium</code></li>
+      <li><code>large</code></li>
+      <li><code>x-large</code></li>
+      <li><code>xx-large</code></li>
+      <li>Een expliciete grootte, bijvoorbeeld: <code>40pt</code></li>
+
+  </ul>
+  </p>
+  <code class="livepreview">
+      <span class="css">
+p {
+    font-size: <select>
+          <option>xx-small</option>
+          <option>x-small</option>
+          <option>small</option>
+          <option>medium</option>
+          <option>large</option>
+          <option>x-large</option>
+          <option selected>xx-large</option>
+          <option>40pt</option>
+      </select>;
+}
+      </span>
+      &lt;p&gt;Een grote tekst&lt;/p&gt;
+  </code>
+
+  <h3>line-height</h3>
+  <p>De regelhoogte van de tekst. Wordt vaak aangegeven in <a href="units.html">em</a></p>
+
+  <code class="livepreview">
+    <span class="css">
+p {
+    line-height: <input type="range" min="0" max="5" step="0.1" value="1.0">em;
+}
+    </span>
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta velit interdum eleifend dignissim. Vestibulum sagittis iaculis tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur facilisis tellus in ultricies dictum. Cras quam velit, convallis sed diam et, dignissim iaculis neque. Suspendisse mollis massa ligula, non consequat dolor scelerisque et. In at placerat eros, commodo vehicula orci.&lt;/p&gt;
+  </code>
+
+  <h3>font-weight</h3>
+  <p>Dikgedrukte tekst. Waardes: <code>bold</code>, <code>normal</code></p>
+  <code class="livepreview">
+    <span class="css">
+p {
+    font-weight: <select><option>normal</option><option selected>bold</option></select>;
+}
+    </span>
+    &lt;p&gt;Een vette tekst!&lt;/p&gt;
+  </code>
+
+  <h3>font-style</h3>
+  <p>Schuingedrukte tekst. Waardes: <code>bold</code>, <code>normal</code></p>
+  <code class="livepreview">
+    <span class="css">
+p {
+  font-style: <select><option>normal</option><option selected>italic</option></select>;
+}
+  </span>
+  &lt;p&gt;Schuingedrukte tekst&lt;/p&gt;
+</code>
+
+  <h3>font-family</h3>
+  <p>Lettertype</p>
+  <code class="livepreview">
+      <span class="css">
+p {
+    font-family: "<select><option>Arial</option><option>Helvetica</option><option>Times New Roman</option><option>Courier New</option></select>";
+}
+      </span>
+      &lt;p&gt;Een ander lettertype...&lt;/p&gt;
+  </code>
+
+  <h3>color</h3>
+  <p>De <a href="units.html">kleur</a> van de tekst</p>
+  <code class="livepreview">
+      <span class="css">
+p {
+    color: <input type="color" value="#ff0000">;
+}
+      </span>
+      &lt;p&gt;Mooie rode tekst&lt;/p&gt;
+  </code>
+
+  <h3>text-decoration</h3>
+  <p>Geeft aan of tekst onderstreept moet worden of niet. Waardes: <code>none</code>, <code>underline</code>, <code>line-through</code></p>
+
+  <code class="livepreview">
+    <span class="css">
+p {
+    text-decoration: <select><option>none</option><option selected>underline</option><option>line-through</option></select>;
+}
+    </span>
+    &lt;p&gt;Tekst met een lijntje&lt;/p&gt;
+  </code>
+
+  <h3>text-shadow</h3>
+  <p>Schaduw achter de tekst. Deze definieer je in de volgorde: ruimte naar links, ruimte naar beneden, blur, kleur.</p>
+
+  <code class="livepreview">
+    <span class="css">
+p {
+    text-shadow: 5px 5px <input type="range" min="0" max="20" value="10">px #666666;
+}
+    </span>
+    &lt;p&gt;Tekst met schaduw&lt;/p&gt;
+  </code>
+
+  <h3>text-transform</h3>
+  <p>Verandert de hoofdletters / kleine letters. Waardes: <code>lowercase</code>, <code>uppercase</code>, <code>capitalize</code></p>
+
+  <code class="livepreview">
+    <span class="css">
+p {
+    text-transform: <select><option>lowercase</option><option selected>uppercase</option><option>capitalize</option></select>;
+}
+    </span>
+    &lt;p&gt;Deze tekst wordt automatisch hoofdletters&lt;/p&gt;
+  </code>
+
+  <h3>text-align</h3>
+  <p>Uitlijning van de tekst</p>
+
+  <code class="livepreview">
+    <span class="css">
+p {
+    text-align: <select><option>left</option><option selected>center</option><option>right</option></select>;
+}
+    </span>
+    &lt;p&gt;Gecentreerd&lt;/p&gt;
+  </code>
+</body>
+</html>
