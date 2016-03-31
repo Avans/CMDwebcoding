@@ -1,0 +1,106 @@
+<html lang="en" ng-app="AdvansDefault">
+<head>
+
+	<!-- Angular material design css -->
+	<!-- https://material.angularjs.org/latest/ -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+
+ 	<!-- Common styles -->
+	<link rel="stylesheet" href="http://advans.herokuapp.com/css/style.css" />
+	<link rel="stylesheet" href="css/theme.css"/>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/leaderboard.css"/>
+    <link rel="stylesheet" href="css/livepreview.css"/>
+    
+	<title>Webs1</title>
+	
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.16/angular.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.16/angular-animate.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.6.0/angular-material-icons.min.js" defer></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js" defer></script>
+
+  <!-- Angular Material Dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js" defer></script>
+
+  <!-- Das pointy pony -->
+  <script src="http://advans-dev.herokuapp.com/js/pointypony.js"></script>
+  <!--<script src="http://localhost:3000/js/pointypony.js"></script>-->
+
+  <meta name="viewport" content="initial-scale=1" />
+  
+  <script src="js/app.js" defer></script>
+  <script src="js/ace/ace.js"></script>
+
+</head>
+<body ng-controller="appCtrl" >
+
+  <section layout="column" class="container">
+    
+
+    <md-toolbar layout="row" ng-controller="ppAuthCtrl" class="theHeader">
+      <div class="md-toolbar-tools">
+        
+        <md-button  hide-gt-md ng-click="toggleLeft()" class="md-icon-button" aria-label="Settings">
+          <ng-md-icon icon="menu" style="fill: white" size="36"></ng-md-icon> 
+            <md-tooltip>
+                Side Nav
+            </md-tooltip>
+        </md-button>
+        
+        <a hide show-gt-sm class="md-title" ui-sref="home"><md-button >
+            Webs1
+        </md-button></a>  
+    
+        <a hide show-gt-sm class="md-title" ui-sref="leaderboards"><md-button >
+            Leaderboards
+        </md-button></a>  
+    
+  
+        <span flex></span>
+        
+          <md-button ng-show="!user" class="md-icon-button" aria-label="Login" ng-click="login()">
+            Login
+          </md-button>
+        
+          <a ui-sref="profile" ng-show="user">
+            <md-button  ng-show="user" class="md-icon-button" aria-label="Settings">
+              <ng-md-icon icon="account_circle" style="fill: white" size="36"></ng-md-icon> 
+            </md-button>
+          </a>
+          
+          <a   ng-show="user">
+            <md-button  ng-click="logout()" aria-label="Logout" >
+                Logout
+            </md-button>
+          </a>
+    
+      
+      </div>
+    </md-toolbar>
+   
+    
+  
+    <section layout="row">
+      
+      <!-- Side Nav -->
+  
+      <div  class="sideNav" ng-include="'templates/sideNav.html'"></div>
+  
+      
+      <!-- Main content -->
+      <div flex>
+          <div ui-view ></div>
+      </div>
+    </section>
+    
+
+   </section>
+
+</body>
+</html>

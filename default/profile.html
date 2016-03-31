@@ -1,0 +1,57 @@
+<section ng-controller="ppProfileCtrl">
+    
+  <md-toolbar class="md-theme-indigo"  >
+    <h1 class="md-toolbar-tools">Profile</h1>
+  </md-toolbar>
+  
+  <section class="md-padding max-sized">
+      <md-card>
+        <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">{{user.name}}</h1>
+        </md-toolbar>
+        <md-card-content>
+          
+          
+          <section class="output">
+            <label>Email</label>
+            <span>{{user._id}}</span>
+          </section>
+          
+         <section class="output">
+            <label>Role</label>
+            <span ng-show="user.isTeacher">Teacher</span>
+             <span ng-show="!user.isTeacher">Student</span>
+          </section>
+          
+
+        </md-card-content>
+      </md-card>
+  </section>
+  
+  <section class="md-padding max-sized">
+      <md-card>
+        <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">Point history</h1>
+        </md-toolbar>
+        <md-card-content>
+      
+          <table class="less">
+            <thead>
+              <tr>
+                <th>Points</th><th>Name</th><th >Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="pointItem in user.totalPointCollection">
+                <td>{{pointItem.points}}</td>
+                <td>{{pointItem.assignmentName}}</td>
+                <td>{{pointItem.timestamp | date:'short'}}</td>
+              </tr>
+            </tbody>
+          </table>						
+  
+  
+        </md-card-content>
+      </md-card>
+  </section>
+</section>  

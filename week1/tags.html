@@ -1,0 +1,56 @@
+<md-toolbar class="md-theme-indigo">
+	<h1 class="md-toolbar-tools">Week 1 - Basistags van HTML</h1>
+</md-toolbar>
+
+<section class="md-padding max-sized">
+
+  <p>We moeten in HTML naast de inhoudelijke tekst ook aangeven wat de <em>opmaak</em> van deze tekst is. Dit doen we met de HTML-tags. Zonder deze tags zou elke webpagina er uit zien als een muur van tekst!</p>
+
+  <figure>
+    <img src="week1/img/geentags.png" class="screenshot" style="max-height: 250px">
+    <figcaption>Een webpagina zonder tags</figcaption>
+  </figure>
+
+  <p>Tags kunnen we gebruiken om een stukje tekst anders mee op te maken. Als we bijvoorbeeld een stukje tekst <b>vetgedrukt</b> willen hebben doen we dat met de <code>&lt;b&gt;</code> tag:</p>
+
+  <code class="livepreview">In deze zin wordt &lt;b&gt;deze tekst&lt;/b&gt; vet afgedrukt</code>
+
+  <p>Zoals je ziet worden tags geopend en gesloten. Met de <code>&lt;/b&gt;</code> tag geven we aan waar de tag gesloten wordt en de tekst dus niet meer vetgedrukt is.</p>
+
+  <h3>Tags zonder einde</h3>
+
+  <p>Sommige speciale tags hoef je niet af te sluiten omdat ze niet om een stukje HTML heenstaan. De &lt;hr&gt; tag bijvoorbeeld:</p>
+
+
+<code class="livepreview">
+De hr tag is een voorbeeld van een tag die je niet afsluit
+&lt;hr&gt;
+Maar de meeste tags moet je wel afsluiten!
+</code>
+
+
+  <h3>Attributen</h3>
+
+  <p>Aan tags kan je ook attributen toevoegen, dit zijn waardes die we aan een tag kunnen (of moeten) meegeven om hem iets te laten doen. Bijvoorbeeld:</p>
+
+  <code class="livepreview">Het 'href' attribuut van de a tag geeft aan waar
+een &lt;a href="http://google.nl/"&gt;link&lt;/a&gt; naar wijst.</code>
+
+  <p>Op internet kun je vinden welke attributen er allemaal bij een tag horen. <a href="http://www.w3schools.com/tags/tag_a.asp">Hier</a> is bijvoorbeeld een lijst te vinden van alle attributen die bij de &lt;a&gt; tag horen.
+
+  <p>Sommige attributen kun je bij alle tags gebruiken. Zoals <code>class</code>, <code>id</code> of <code>style</code>.</p>
+
+<md-card>
+    <md-toolbar class="md-theme-indigo md-accent">
+			<h1 class="md-toolbar-tools">Anotomie van een element</h1>
+	</md-toolbar>
+    <md-card-content>
+  <div class="anatomy">
+    <span class="arch upper"><div>Element</div><span class="arch lower green"><div>Open-tag</div>&lt;a&nbsp;<span class="arch upper blue"><div>Attribuut</div><span class="arch upper purple"><div>Attribuut-naam</div>href</span>="<span class="arch upper purple"><div>Attribuut-waarde</div>http://avans.nl/</span>"</span>></span>Avans<span class="arch lower green"><div>Sluit-tag</div>&lt;/a&gt;</span>
+    </span>
+  </div>
+   </md-card-content>
+</md-card>
+ 
+
+</section>

@@ -1,0 +1,39 @@
+
+ 
+ <div class="modal-dialog" ng-controller="ppFeedbackCtrl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Feedback</h4>
+      </div>
+      <div class="modal-body">
+     
+       <div class="form-group">
+           <p>Feedback is anoniem, en wordt gebruikt om de lesstof en het webdictaat te verbeteren</p>
+       </div>
+          
+        <div class="form-group feeling">
+            <label for="textArea" class="col-lg-2 control-label">Gevoel</label>
+            
+            <div class="col-lg-10">
+                <img src="default/img/sad.png" ng-class="{selected: feeling == 'sad'}" ng-click="feeling = 'sad'" >
+                <img src="default/img/okay.png"  ng-class="{selected: feeling == 'okay'}" ng-click="feeling = 'okay'" >
+                <img src="default/img/happy.png"  ng-class="{selected: feeling == 'happy'}" ng-click="feeling = 'happy'" >
+            </div>
+        </div>          
+      
+         <div class="form-group">
+            <label for="textArea" class="col-lg-2 control-label">Toelichting</label>
+            <div class="col-lg-10">
+                <textarea  class="proper-sized" rows="3" id="textArea" ng-model="description"></textarea>
+            </div>
+        </div>          
+          
+      </div>
+      <div class="modal-footer">
+        
+        <button class="btn btn-inverse btn-default left" data-dismiss="modal" ng-click="sendFeedback()">Send feedback</button>
+        <button class="btn  btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>

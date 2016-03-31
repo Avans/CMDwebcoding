@@ -1,0 +1,125 @@
+<md-toolbar class="md-theme-indigo">
+	<h1 class="md-toolbar-tools">Week 2 - Formulieren</h1>
+</md-toolbar>
+
+<section class="md-padding max-sized">
+    
+  <img src="week2/img/formulier.png" alt="Formulier met hand" class="pull-right card">
+
+  <p>Met de tags die we tot nu toe behandeld hebben kunnen we al mooie webpagina's maken. Maar deze pagina's zijn toch vooral éénrichtingsverkeer. Je kan ze lezen, maar bieden voor de rest weinig interactie.</p>
+
+  <p>Dat is waarschijnlijk niet het internet zoals jij dat kent. Het internet waar je op elke pagina een reactie kan achterlaten, of met een zoekbalk iets kunt zoeken. Om zulke pagina's te maken moeten we gebruik maken van HTML-forms.</p>
+
+  <h3>Een simpel formulier</h3>
+
+  <p>Laten we eens een simpel formulier bestuderen. Dit formulier werkt ook al, probeer maar uit!</p>
+
+  <code class="livepreview">
+&lt;form action="https://google.com/" method="GET"&gt;
+  &lt;input name="q" type="text"&gt;
+  &lt;input type="submit" value="Zoek met Google"&gt;
+&lt;/form&gt;
+  </code>
+
+  <p>Een formulier staat altijd tussen de <code>&lt;form&gt;</code> tags. Tussen deze tags staan de verschillende input elementen van het formulier die de gebruiker kan invullen. Alleen de input elementen die binnen het formulier staan worden gebruikt, let dus goed op waar je de sluit-tag zet voor het formulier.</p>
+
+  <h3>Form-tag</h3>
+
+  <p>Een formulier maak je dus met de form tag. Deze tag op zich verandert niet de opmaak van de pagina, maar hij heeft wel een aantal belangrijke attributen:</p>
+
+  <h4>action</h4>
+
+  <p>Het action attribuut geeft een <a href="../basis/links.html">link</a> aan waar het formulier naartoe verzonden moet worden als de gebruiker op een submit knop klikt. Vaak is dat een script op je webpagina die de inhoud van het formulier leest en er iets mee doet. Bijvoorbeeld in een database plaatsen. Hoe je deze scripts kan schrijven komt in een volgend vak aan bod.</p>
+
+  <h4>method</h4><a href="http://www.w3schools.com/tags/ref_httpmethods.asp" class="w3"></a>
+
+  <p>Een formulier kan op twee verschillende manieren verzonden worden. Via een <b>GET</b> of via een <b>POST</b>. Het verschil zit hem er in op wat voor manier de data in het formulier wordt verzonden.</p>
+
+  <p>Op de <b>GET</b> manier komt de data uit het formulier achter de URL te staan van het action attribuut, achter het vraagteken. Dat ziet er dan bijvoorbeeld zo uit: <code>?name1=value1&amp;name2=value2</code>. Deze methode wordt vaak gebruikt voor zoekformulieren.</p>
+
+  <p>De <b>POST</b> manier komt de data niet in de URL te staan maar wordt deze onzichtbaar mee verstuurd in de request. Dit is gebruikelijk voor alle formulieren waarbij data van gebruikers wordt verwerkt of opgeslagen. Het is dan namelijk onmogelijk om 'per ongeluk' weer naar dezelfde URL te gaan en iets uit een formulier dubbel op te slaan.</p>
+
+  <h3>Input-tag</h3>
+
+  <p>Met de &lt;form&gt; tag gereed kunnen we alle invoervelden gaan maken. Deze maak je bijna allemaal met de <code>&lt;input&gt;</code> tag. Met alleen deze tag en het <b>type</b>-attribuut kunnen we al een heel divers palet aan invoervelden krijgen:</p>
+
+  <code class="livepreview">
+Text:     &lt;input type="text"&gt;&lt;br&gt;
+Checkbox: &lt;input type="checkbox"&gt;&lt;br&gt;
+Date:     &lt;input type="date"&gt;&lt;br&gt;
+File:     &lt;input type="file"&gt;&lt;br&gt;
+Number:   &lt;input type="number"&gt;&lt;br&gt;
+Password: &lt;input type="password"&gt;&lt;br&gt;
+Radio:    &lt;input type="radio"&gt;&lt;br&gt;
+Color:    &lt;input type="color"&gt;&lt;br&gt;
+Range:    &lt;input type="range"&gt;&lt;br&gt;
+Reset:    &lt;input type="reset"&gt;&lt;br&gt;
+Submit:   &lt;input type="submit"&gt;&lt;br&gt;
+  </code>
+
+  <p>Afhankelijk van welk type je gebruikt zijn er extra attributen waarmee je het invoerveld weer kan aanpassen. Twee belangrijke die voor alle inputs gelden zijn:</p>
+
+  <h4>name</h4>
+
+  <p>Het name attribuut geeft de naam aan van het invoerveld. Het script dat het formulier verwerkt kan dan aan de hand van deze naam de waarde van het invoerveld weer krijgen.</p>
+
+  <p>Een checkbox en een radiobutton veld komen bijna nooit voor met maar één keuze. Je bied mensen meerdere keuzes aan door het input object te herhalen met verschillende waarden, maar met DEZELFDE name!</p>
+
+  <code class="livepreview">
+&lt;input type="radio" name="kiesMaar" value="1"&gt;Ja
+&lt;input type="radio" name="kiesMaar" value="0"&gt;Nee
+  </code>
+
+  <p>Alleen hierdoor begrijpt de browser dat het om hetzelfde veld gaat en zal bijvoorbeeld je radiobutton veld ook echt gaan werken!
+
+  <h4>value</h4>
+
+  <p>Soms wil je al een waarde ingevoerd hebben als het formulier getoond wordt. Dat kan je dan doen met het value attribuut:</p>
+
+  <code class="livepreview">
+    &lt;input type="text" name="voornaam" value="Paul"&gt;
+  </code>
+
+  <h4>placeholder</h4>
+
+  <p>Dit is geen belangrijk attribuut, maar ziet er wel leuk uit op een formulier:</p>
+
+  <code class="livepreview">
+    &lt;input type="text" name="voornaam" placeholder="Typ hier uw voornaam..."&gt;
+  </code>
+
+  <h3>Select-tag</h3>
+
+  <p>Helaas kunnen we niet alle invoervelden met de &lt;input&gt; tag maken. Er zijn een tweetal tags spelbreker die het weer op hun eigen manier moeten doen. De <code>&lt;select&gt;</code> tag is er zo eentje.</p>
+
+  <p>Met de &lt;select&gt; tag kan je een dropdown invoer maken. De verschillende opties in de dropdown kan je dan binnen de select tag maken met de &lt;option&gt; tag. Let op dat de <b>name</b> en <b>value</b> attribuut ook voor de select tag gelden, maar dat de name bij de &lt;select&gt; hoort en de value bij de &lt;option&gt;.</p>
+
+  <code class="livepreview">
+&lt;select name="opties"&gt;
+  &lt;option value="o1"&gt;Optie 1&lt;/option&gt;
+  &lt;option value="o2"&gt;Optie 2&lt;/option&gt;
+  &lt;option value="o3"&gt;Optie 3&lt;/option&gt;
+&lt;/select&gt;
+  </code>
+
+  <h3>Textarea-tag</h3>
+  <p>De text input is soms wat klein voor wat we nodig hebben. Als we gebruikers een reactie of een berichtje willen laten typen is het handig als ze wat meer ruimte hebben. Dit is waar de <code>&lt;textarea&gt;</code> tag voor gebruikt wordt. In dit invoerveld kunnen gebruikers meerdere regels typen, en in moderne browsers kunnen ze dit veld ook nog eens zelf groter en kleiner maken.</p>
+
+  <code class="livepreview">
+&lt;textarea name="reactie"&gt;Typ hier uw reactie...&lt;/textarea&gt;
+
+  &nbsp;
+  </code>
+
+  <h3>Label-tag</h3>
+  <p>Vaak staat er vlak voor een invoerveld een labeltje waarmee je de gebruiker duidelijk maakt waar het invoerveld voor bedoeld is. Dit zie je zo vaak dat ze er speciaal een tag voor hebben gemaakt, de <code>&lt;label&gt;</code>. Deze tag heeft een attribuut <b>for</b> waarin de id staat van het element waar het een label voor is.</p>
+
+  <p>De tag lijkt niet zo heel veel toe te voegen aan een pagina, maar heeft wel degelijk meerwaarde. Geautomatiseerde programma's of schermvoorlezers kunnen dan namelijk beter zien wat er in een invoerveld moet worden ingevuld. Oh ja, en in browsers wordt het invoerveld geselecteerd als je op het label klikt!</p>
+
+  <code class="livepreview">
+&lt;label for="voornaam"&gt;Voornaam:&lt;/label&gt;
+&lt;input type="text" name="voornaam" id="voornaam"&gt;
+  </code>
+
+
+</section>
